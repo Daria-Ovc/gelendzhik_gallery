@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Галерея</title>
+
+    <script type="text/javascript" src="js/jgallery.min.js?v=2.2.1"></script>
+
+</head>
+
+<body>
+
+<div class="my_container">
+
+    <div id="gallery">
+    </div>
+
+    <script type="text/javascript">
+        document.querySelector('#gallery').appendChild(JGallery.create([{
+            title: 'Фотографии города Геленджик',
+            items: [{
+                url: 'images/large/1.jpg',
+                thumbUrl: 'images/thumbs/1.jpg',
+                title: 'Вид города с канатной дороги',
+                hash: 'photo-1'
+            }, {
+                url: 'images/large/2.jpg',
+                thumbUrl: 'images/thumbs/2.jpg',
+                title: 'Вид города с канатной дороги',
+                hash: 'photo-2'
+            }, {
+                url: 'images/large/3.jpg',
+                thumbUrl: 'images/thumbs/3.jpg',
+                title: 'Вид города с канатной дороги',
+                hash: 'photo-3'
+            }, {
+                url: 'images/large/4.jpg',
+                thumbUrl: 'images/thumbs/4.jpg',
+                title: 'Канатная дорога',
+                hash: 'photo-4'
+            }, {
+                url: 'images/large/5.jpg',
+                thumbUrl: 'images/thumbs/5.jpg',
+                title: 'Гора вблизи',
+                hash: 'photo-5'
+            }, {
+                url: 'images/large/6.jpg',
+                thumbUrl: 'images/thumbs/6.jpg',
+                title: 'Гора вблизи',
+                hash: 'photo-6'
+            }, {
+                url: 'images/large/7.jpg',
+                thumbUrl: 'images/thumbs/7.jpg',
+                title: 'Черное море',
+                hash: 'photo-7'
+            }, {
+                url: 'images/large/8.jpg',
+                thumbUrl: 'images/thumbs/8.jpg',
+                title: 'Черное море',
+                hash: 'photo-8'
+            }, {
+                url: 'images/large/9.jpg',
+                thumbUrl: 'images/thumbs/9.jpg',
+                title: 'Закат у моря',
+                hash: 'photo-9'
+            }, ]
+        }, {
+            title: 'Видео Черного моря',
+            items: [{
+                element: JGallery.createElement('<span style="font-size: 5vmax">Послушайте шум моря и волн...</span>'),
+                thumbElement: JGallery.createElement('<span>-></span>'),
+                title: '',
+                hash: 'text'
+            }, {
+                element: JGallery.createElement('<video src="video/sea.mp4" loop autoplay/>'),
+                thumbElement: JGallery.createElement('<span>Море</span>'),
+                title: 'Видео моря',
+                hash: 'video'
+            }, ]
+        }]).getElement());
+    </script>
+
+</div>
+
+</body>
+
+</html>
